@@ -96,7 +96,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/sandbox-ng-uni-plugin-demo/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -113,6 +113,39 @@
               "optimization": false,
               "sourceMap": true,
               "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "sandbox-ng-uni-plugin-demo:build:development",
+              "serverTarget": "sandbox-ng-uni-plugin-demo:server:development"
+            },
+            "production": {
+              "browserTarget": "sandbox-ng-uni-plugin-demo:build:production",
+              "serverTarget": "sandbox-ng-uni-plugin-demo:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sandbox-ng-uni-plugin-demo:build:production",
+              "serverTarget": "sandbox-ng-uni-plugin-demo:server:production"
+            },
+            "development": {
+              "browserTarget": "sandbox-ng-uni-plugin-demo:build:development",
+              "serverTarget": "sandbox-ng-uni-plugin-demo:server:development"
             }
           },
           "defaultConfiguration": "production"
