@@ -25,10 +25,7 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require("path").join(
-        __dirname,
-        "./coverage/sandbox-ng-uni-plugin-demo"
-      ),
+      dir: require("path").join(__dirname, "./coverage/uni-plugin-ui-demo"),
       subdir: ".",
       reporters: [{ type: "html" }, { type: "text-summary" }],
     },
