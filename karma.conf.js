@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require("path").join(__dirname, "./coverage/uni-plugin-cli-demo"),
+      dir: require("path").join(__dirname, "./coverage/uni-plugin-ui-demo"),
       subdir: ".",
       reporters: [{ type: "html" }, { type: "text-summary" }],
     },

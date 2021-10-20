@@ -1,5 +1,5 @@
 {
-  "name": "uni-plugin-cli-demo",
+  "name": "uni-plugin-ui-demo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run uni-plugin-cli-demo:serve-ssr",
-    "serve:ssr": "node dist/uni-plugin-cli-demo/server/main.js",
-    "build:ssr": "ng build && ng run uni-plugin-cli-demo:server",
-    "prerender": "ng run uni-plugin-cli-demo:prerender"
+    "dev:ssr": "ng run uni-plugin-ui-demo:serve-ssr",
+    "serve:ssr": "node dist/uni-plugin-ui-demo/server/main.js",
+    "build:ssr": "ng build && ng run uni-plugin-ui-demo:server",
+    "prerender": "ng run uni-plugin-ui-demo:prerender"
   },
   "private": true,
   "dependencies": {
